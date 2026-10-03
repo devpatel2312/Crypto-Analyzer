@@ -19,6 +19,17 @@ python run.py
 
 Open `http://127.0.0.1:8000`.
 
+## Deploy to Render
+
+This repository includes a Render Blueprint (`render.yaml`) for deploying the app as a public web service.
+
+1. Push the repository to GitHub.
+2. Sign in to [Render](https://render.com/), choose **New** → **Blueprint**.
+3. Connect the `devpatel2312/Crypto-Analyzer` repository and deploy the `render.yaml` Blueprint.
+4. Wait for the first deploy to finish, then open the `onrender.com` URL shown on the Render service page.
+
+Render automatically deploys later commits pushed to the connected branch. The free web-service plan may spin down when idle, so the first request after inactivity can take a little longer. QuickNode is optional; the app's live options market data comes from Deribit.
+
 ## Configuration
 
 Set `DERIBIT_URL` if using another Deribit-compatible endpoint. QuickNode URLs are optional and are only used for blockchain health metadata.

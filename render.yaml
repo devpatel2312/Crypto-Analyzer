@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: crypto-analyzer
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/assets
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: DERIBIT_URL
+        value: https://www.deribit.com/api/v2
+      - key: CRYPTO_RISK_FREE
+        value: "0.0"
