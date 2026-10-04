@@ -33,6 +33,7 @@ Render automatically deploys later commits pushed to the connected branch. The f
 ## Configuration
 
 Set `DERIBIT_URL` if using another Deribit-compatible endpoint. QuickNode URLs are optional and are only used for blockchain health metadata.
+The dependencies include `tzdata` so the Asia/Kolkata timezone works on Windows systems without an installed IANA timezone database.
 
 ## Greeks
 
